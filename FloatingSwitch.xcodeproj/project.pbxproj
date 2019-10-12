@@ -11,9 +11,11 @@
 		51819F6B23512645006E5ECD /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51819F6A23512645006E5ECD /* UIView.swift */; };
 		51819F702352410F006E5ECD /* FloatingSwitchSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51819F6E2352410E006E5ECD /* FloatingSwitchSegment.swift */; };
 		51819F712352410F006E5ECD /* FloatingSwitchSegment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51819F6F2352410F006E5ECD /* FloatingSwitchSegment.xib */; };
+		51819F74235250A7006E5ECD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 51819F76235250A7006E5ECD /* Localizable.strings */; };
+		51819F7B23525136006E5ECD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51819F7A23525136006E5ECD /* String.swift */; };
 		51FF00B42351102200AEC536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FF00B32351102200AEC536 /* AppDelegate.swift */; };
 		51FF00B62351102200AEC536 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FF00B52351102200AEC536 /* SceneDelegate.swift */; };
-		51FF00B82351102200AEC536 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FF00B72351102200AEC536 /* ViewController.swift */; };
+		51FF00B82351102200AEC536 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FF00B72351102200AEC536 /* SampleViewController.swift */; };
 		51FF00BB2351102200AEC536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51FF00B92351102200AEC536 /* Main.storyboard */; };
 		51FF00BD2351102300AEC536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51FF00BC2351102300AEC536 /* Assets.xcassets */; };
 		51FF00C02351102300AEC536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51FF00BE2351102300AEC536 /* LaunchScreen.storyboard */; };
@@ -26,10 +28,13 @@
 		51819F6A23512645006E5ECD /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		51819F6E2352410E006E5ECD /* FloatingSwitchSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingSwitchSegment.swift; sourceTree = "<group>"; };
 		51819F6F2352410F006E5ECD /* FloatingSwitchSegment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FloatingSwitchSegment.xib; sourceTree = "<group>"; };
+		51819F75235250A7006E5ECD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		51819F77235250BF006E5ECD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		51819F7A23525136006E5ECD /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		51FF00B02351102200AEC536 /* FloatingSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloatingSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FF00B32351102200AEC536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51FF00B52351102200AEC536 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		51FF00B72351102200AEC536 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		51FF00B72351102200AEC536 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		51FF00BA2351102200AEC536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51FF00BC2351102300AEC536 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51FF00BF2351102300AEC536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 			children = (
 				51819F6A23512645006E5ECD /* UIView.swift */,
 				51819F6623511D76006E5ECD /* NibInstantiatable.swift */,
+				51819F7A23525136006E5ECD /* String.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -91,12 +97,13 @@
 			children = (
 				51FF00B32351102200AEC536 /* AppDelegate.swift */,
 				51FF00B52351102200AEC536 /* SceneDelegate.swift */,
-				51FF00B72351102200AEC536 /* ViewController.swift */,
 				51FF00B92351102200AEC536 /* Main.storyboard */,
+				51FF00B72351102200AEC536 /* SampleViewController.swift */,
 				51819F6D2351443B006E5ECD /* FloatingSwitch */,
 				51FF00BC2351102300AEC536 /* Assets.xcassets */,
 				51FF00BE2351102300AEC536 /* LaunchScreen.storyboard */,
 				51FF00C12351102300AEC536 /* Info.plist */,
+				51819F76235250A7006E5ECD /* Localizable.strings */,
 			);
 			path = FloatingSwitch;
 			sourceTree = "<group>";
@@ -143,6 +150,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 51FF00A72351102200AEC536;
 			productRefGroup = 51FF00B12351102200AEC536 /* Products */;
@@ -160,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51FF00C02351102300AEC536 /* LaunchScreen.storyboard in Resources */,
+				51819F74235250A7006E5ECD /* Localizable.strings in Resources */,
 				51FF00BD2351102300AEC536 /* Assets.xcassets in Resources */,
 				51FF00BB2351102200AEC536 /* Main.storyboard in Resources */,
 				51FF00C8235111EE00AEC536 /* FloatingSwitch.xib in Resources */,
@@ -176,10 +185,11 @@
 			files = (
 				51819F6B23512645006E5ECD /* UIView.swift in Sources */,
 				51819F6823511D76006E5ECD /* NibInstantiatable.swift in Sources */,
-				51FF00B82351102200AEC536 /* ViewController.swift in Sources */,
+				51FF00B82351102200AEC536 /* SampleViewController.swift in Sources */,
 				51FF00B42351102200AEC536 /* AppDelegate.swift in Sources */,
 				51FF00B62351102200AEC536 /* SceneDelegate.swift in Sources */,
 				51FF00CA2351120000AEC536 /* FloatingSwitch.swift in Sources */,
+				51819F7B23525136006E5ECD /* String.swift in Sources */,
 				51819F702352410F006E5ECD /* FloatingSwitchSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +197,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		51819F76235250A7006E5ECD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51819F75235250A7006E5ECD /* en */,
+				51819F77235250BF006E5ECD /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		51FF00B92351102200AEC536 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -210,6 +229,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -256,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,6 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -310,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -84,6 +84,9 @@ class FloatingSwitch: UIView, NibInstantiatable {
 	
 	override func layoutSubviews() {
 		super.layoutSubviews()
+		
+		// Prepare to fix the layout first
+		self.layoutIfNeeded()
 
 		// Corner Radius of the Background View
 		self.backgroundView.layer.cornerRadius = self.backgroundView.bounds.height / 2
@@ -98,16 +101,14 @@ class FloatingSwitch: UIView, NibInstantiatable {
 	private func updateFocus() {
 		// Corner Radius of the Knob
 		self.knob.layer.cornerRadius = self.backgroundView.layer.cornerRadius - (self.backgroundView.bounds.height - self.knob.bounds.height) / 2
-
-		// Prepare to fix the layout first
-		self.layoutIfNeeded()
 		
 		if self.focusedIndex < self.tabs.count {
 			let targetTab = self.tabs[self.focusedIndex]
+			let targetTabFrame = convert(targetTab.frame, from: targetTab.superview)
 			
 			self.knob.isHidden = false
-			self.knobWidthConstraint.constant = max(targetTab.width - self.knobXMargin * 2, self.knob.height)
-			self.knobXMarginConstraint.constant = targetTab.x + self.knobXMargin
+			self.knobWidthConstraint.constant = max(targetTabFrame.width, self.knob.height)
+			self.knobXMarginConstraint.constant = targetTabFrame.origin.x
 			
 			// Animate constraints
 			if self.animateFocusMoving {

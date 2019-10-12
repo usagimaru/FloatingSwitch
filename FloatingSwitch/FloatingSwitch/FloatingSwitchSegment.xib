@@ -12,9 +12,10 @@
             <rect key="frame" x="0.0" y="0.0" width="102" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SW-nA-myV">
-                    <rect key="frame" x="20" y="5" width="62" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SW-nA-myV">
+                    <rect key="frame" x="0.0" y="0.0" width="102" height="40"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <inset key="contentEdgeInsets" minX="18" minY="0.0" maxX="18" maxY="0.0"/>
                     <state key="normal" title="Button">
                         <color key="titleColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -25,9 +26,10 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="8SW-nA-myV" firstAttribute="centerY" secondItem="VLT-Fo-otM" secondAttribute="centerY" id="ONb-5d-4ye"/>
-                <constraint firstAttribute="trailing" secondItem="8SW-nA-myV" secondAttribute="trailing" constant="20" id="Vq2-yg-KRt"/>
-                <constraint firstItem="8SW-nA-myV" firstAttribute="leading" secondItem="VLT-Fo-otM" secondAttribute="leading" constant="20" id="c1J-bE-Bml"/>
+                <constraint firstAttribute="bottom" secondItem="8SW-nA-myV" secondAttribute="bottom" id="9Qc-3N-GQ6"/>
+                <constraint firstAttribute="trailing" secondItem="8SW-nA-myV" secondAttribute="trailing" id="Vq2-yg-KRt"/>
+                <constraint firstItem="8SW-nA-myV" firstAttribute="leading" secondItem="VLT-Fo-otM" secondAttribute="leading" id="c1J-bE-Bml"/>
+                <constraint firstItem="8SW-nA-myV" firstAttribute="top" secondItem="VLT-Fo-otM" secondAttribute="top" id="jT5-Px-f5W"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

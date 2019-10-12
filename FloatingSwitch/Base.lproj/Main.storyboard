@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sample View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="FloatingSwitch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="SampleViewController" customModule="FloatingSwitch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,24 +95,35 @@
                                     <constraint firstAttribute="height" constant="40" id="rDu-2z-jOr"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhc-8s-h47" customClass="FloatingSwitch" customModule="FloatingSwitch" customModuleProvider="target">
+                                <rect key="frame" x="77" y="52" width="260" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="QA5-Do-B4m"/>
+                                    <constraint firstAttribute="height" constant="60" id="bhh-qE-iVm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="OaK-jh-FA2" secondAttribute="trailing" id="3bd-Wl-UlW"/>
                             <constraint firstItem="OaK-jh-FA2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3j6-Kg-LXi"/>
                             <constraint firstAttribute="trailing" secondItem="NYq-q2-yKK" secondAttribute="trailing" constant="12" id="Ayf-Wn-Fpd"/>
+                            <constraint firstItem="bhc-8s-h47" firstAttribute="top" secondItem="WIG-b4-biq" secondAttribute="top" constant="8" id="Fg9-U4-g1b"/>
                             <constraint firstItem="NYq-q2-yKK" firstAttribute="top" secondItem="kfi-rV-0M3" secondAttribute="bottom" constant="20" id="WR8-jd-6Hy"/>
                             <constraint firstItem="NYq-q2-yKK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="aTV-r0-NNI"/>
                             <constraint firstItem="WIG-b4-biq" firstAttribute="trailing" secondItem="kfi-rV-0M3" secondAttribute="trailing" constant="12" id="iA1-Z0-Id5"/>
                             <constraint firstAttribute="bottom" secondItem="OaK-jh-FA2" secondAttribute="bottom" id="rAt-IQ-3Kx"/>
                             <constraint firstItem="OaK-jh-FA2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rob-h7-rhd"/>
+                            <constraint firstItem="bhc-8s-h47" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yA8-bx-CF2"/>
                             <constraint firstAttribute="bottomMargin" secondItem="NYq-q2-yKK" secondAttribute="bottom" constant="60" id="ysZ-K6-lZM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WIG-b4-biq"/>
                     </view>
                     <connections>
-                        <outlet property="FloatingSwitch" destination="NYq-q2-yKK" id="3uw-oM-v8e"/>
-                        <outlet property="switchBar" destination="kfi-rV-0M3" id="SHy-wF-O5h"/>
+                        <outlet property="floatingSwitch1" destination="NYq-q2-yKK" id="RED-I4-Rmy"/>
+                        <outlet property="floatingSwitch2" destination="bhc-8s-h47" id="9II-Hr-UIC"/>
+                        <outlet property="interfaceStyleSwitch" destination="kfi-rV-0M3" id="8sZ-0o-Vm5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

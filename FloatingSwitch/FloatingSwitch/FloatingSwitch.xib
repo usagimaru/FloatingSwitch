@@ -33,17 +33,17 @@
                                     <constraint firstAttribute="width" constant="100" id="LPD-54-sQd"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="z3f-gJ-j06">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="z3f-gJ-j06">
+                                <rect key="frame" x="4" y="4" width="406" height="32"/>
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="z3f-gJ-j06" firstAttribute="top" secondItem="mC7-RC-OIU" secondAttribute="top" id="Ee7-s7-hTE"/>
+                            <constraint firstItem="z3f-gJ-j06" firstAttribute="top" secondItem="mC7-RC-OIU" secondAttribute="top" constant="4" id="Ee7-s7-hTE"/>
                             <constraint firstItem="OyX-Yc-Pal" firstAttribute="leading" secondItem="mC7-RC-OIU" secondAttribute="leading" constant="4" id="MJX-td-toj"/>
-                            <constraint firstAttribute="bottom" secondItem="z3f-gJ-j06" secondAttribute="bottom" id="aE4-mq-Qyw"/>
+                            <constraint firstAttribute="bottom" secondItem="z3f-gJ-j06" secondAttribute="bottom" constant="4" id="aE4-mq-Qyw"/>
                             <constraint firstItem="OyX-Yc-Pal" firstAttribute="top" secondItem="mC7-RC-OIU" secondAttribute="top" constant="4" id="cFl-us-Q2i"/>
-                            <constraint firstAttribute="trailing" secondItem="z3f-gJ-j06" secondAttribute="trailing" id="kwc-ZT-dVG"/>
-                            <constraint firstItem="z3f-gJ-j06" firstAttribute="leading" secondItem="mC7-RC-OIU" secondAttribute="leading" id="oiq-8c-IPq"/>
+                            <constraint firstAttribute="trailing" secondItem="z3f-gJ-j06" secondAttribute="trailing" constant="4" id="kwc-ZT-dVG"/>
+                            <constraint firstItem="z3f-gJ-j06" firstAttribute="leading" secondItem="mC7-RC-OIU" secondAttribute="leading" constant="4" id="oiq-8c-IPq"/>
                             <constraint firstAttribute="bottom" secondItem="OyX-Yc-Pal" secondAttribute="bottom" constant="4" id="yqt-9J-w9m"/>
                         </constraints>
                     </view>
