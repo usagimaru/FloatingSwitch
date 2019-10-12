@@ -88,18 +88,18 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfi-rV-0M3" customClass="FloatingSwitch" customModule="FloatingSwitch" customModuleProvider="target">
-                                <rect key="frame" x="242" y="736" width="160" height="40"/>
+                                <rect key="frame" x="302" y="736" width="100" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" priority="750" constant="160" id="fh7-ZQ-EJx"/>
+                                    <constraint firstAttribute="width" constant="100" placeholder="YES" id="1b8-iG-4cN"/>
                                     <constraint firstAttribute="height" constant="40" id="rDu-2z-jOr"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhc-8s-h47" customClass="FloatingSwitch" customModule="FloatingSwitch" customModuleProvider="target">
-                                <rect key="frame" x="77" y="52" width="260" height="60"/>
+                                <rect key="frame" x="157" y="52" width="100" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="QA5-Do-B4m"/>
+                                    <constraint firstAttribute="width" constant="100" placeholder="YES" id="3JZ-rx-KW1"/>
                                     <constraint firstAttribute="height" constant="60" id="bhh-qE-iVm"/>
                                 </constraints>
                             </view>

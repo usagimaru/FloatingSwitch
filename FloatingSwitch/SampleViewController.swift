@@ -58,14 +58,6 @@ class SampleViewController: UIViewController {
 		self.interfaceStyleSwitch.animateFocusMoving = true
 	}
 	
-	override func viewWillDisappear(_ animated: Bool) {
-		super.viewWillDisappear(animated)
-	}
-	
-	override func viewDidDisappear(_ animated: Bool) {
-		super.viewDidDisappear(animated)
-	}
-	
 	
 	// MARK: -
 	

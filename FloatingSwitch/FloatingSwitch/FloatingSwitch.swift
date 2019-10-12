@@ -33,7 +33,7 @@ class FloatingSwitch: UIView, NibInstantiatable {
 		}
 	}
 	
-	var tabs: [FloatingSwitchSegment] {
+	var segments: [FloatingSwitchSegment] {
 		return self.stackView.arrangedSubviews as? [FloatingSwitchSegment] ?? []
 	}
 	
@@ -82,6 +82,21 @@ class FloatingSwitch: UIView, NibInstantiatable {
 		setNeedsLayout()
 	}
 	
+	override var intrinsicContentSize: CGSize {
+		// セグメントが空の時は高さを横幅に採用
+		if self.segments.isEmpty {
+			return CGSize(width: self.height, height: UIView.noIntrinsicMetric)
+		}
+		
+		// スタックの最小幅＋マージン
+		let width = self.stackView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).width + self.stackView.x * 2
+		return CGSize(width: width, height: UIView.noIntrinsicMetric)
+	}
+	
+	override func prepareForInterfaceBuilder() {
+		invalidateIntrinsicContentSize()
+	}
+	
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		
@@ -102,8 +117,8 @@ class FloatingSwitch: UIView, NibInstantiatable {
 		// Corner Radius of the Knob
 		self.knob.layer.cornerRadius = self.backgroundView.layer.cornerRadius - (self.backgroundView.bounds.height - self.knob.bounds.height) / 2
 		
-		if self.focusedIndex < self.tabs.count {
-			let targetTab = self.tabs[self.focusedIndex]
+		if self.focusedIndex < self.segments.count {
+			let targetTab = self.segments[self.focusedIndex]
 			let targetTabFrame = convert(targetTab.frame, from: targetTab.superview)
 			
 			self.knob.isHidden = false
@@ -120,7 +135,7 @@ class FloatingSwitch: UIView, NibInstantiatable {
 			// Button Title Colors
 			targetTab.setActiveColor()
 			
-			for tab in self.tabs where tab != targetTab {
+			for tab in self.segments where tab != targetTab {
 				tab.setInactiveColor()
 			}
 		}
@@ -132,7 +147,7 @@ class FloatingSwitch: UIView, NibInstantiatable {
 	}
 	
 	private func index(of tab: FloatingSwitchSegment) -> Int? {
-		let tabs = self.tabs
+		let tabs = self.segments
 		if tabs.contains(tab) {
 			return tabs.firstIndex(of: tab)
 		}
@@ -156,7 +171,7 @@ class FloatingSwitch: UIView, NibInstantiatable {
 	}
 	
 	func removeAllTabs() {
-		self.tabs.forEach {
+		self.segments.forEach {
 			$0.removeFromSuperview()
 		}
 	}
