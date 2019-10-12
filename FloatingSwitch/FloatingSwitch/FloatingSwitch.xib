@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FloatingSwitch" customModule="FloatingSwitch" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="amI-qA-HRZ" id="SmT-Kz-FBI"/>
+                <outlet property="knob" destination="OyX-Yc-Pal" id="5Nl-1Z-E2V"/>
+                <outlet property="knobWidthConstraint" destination="LPD-54-sQd" id="gPM-hy-o5K"/>
+                <outlet property="knobXMarginConstraint" destination="MJX-td-toj" id="B2b-Z4-Wm2"/>
+                <outlet property="stackView" destination="z3f-gJ-j06" id="AIh-E6-mmR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amI-qA-HRZ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mC7-RC-OIU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OyX-Yc-Pal" userLabel="Knob">
+                                <rect key="frame" x="4" y="4" width="100" height="32"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="LPD-54-sQd"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="z3f-gJ-j06">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="z3f-gJ-j06" firstAttribute="top" secondItem="mC7-RC-OIU" secondAttribute="top" id="Ee7-s7-hTE"/>
+                            <constraint firstItem="OyX-Yc-Pal" firstAttribute="leading" secondItem="mC7-RC-OIU" secondAttribute="leading" constant="4" id="MJX-td-toj"/>
+                            <constraint firstAttribute="bottom" secondItem="z3f-gJ-j06" secondAttribute="bottom" id="aE4-mq-Qyw"/>
+                            <constraint firstItem="OyX-Yc-Pal" firstAttribute="top" secondItem="mC7-RC-OIU" secondAttribute="top" constant="4" id="cFl-us-Q2i"/>
+                            <constraint firstAttribute="trailing" secondItem="z3f-gJ-j06" secondAttribute="trailing" id="kwc-ZT-dVG"/>
+                            <constraint firstItem="z3f-gJ-j06" firstAttribute="leading" secondItem="mC7-RC-OIU" secondAttribute="leading" id="oiq-8c-IPq"/>
+                            <constraint firstAttribute="bottom" secondItem="OyX-Yc-Pal" secondAttribute="bottom" constant="4" id="yqt-9J-w9m"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="systemThinMaterial"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="amI-qA-HRZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8zE-JI-kPC"/>
+                <constraint firstItem="amI-qA-HRZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NBV-xX-i5b"/>
+                <constraint firstAttribute="trailing" secondItem="amI-qA-HRZ" secondAttribute="trailing" id="dAU-B6-bhn"/>
+                <constraint firstAttribute="bottom" secondItem="amI-qA-HRZ" secondAttribute="bottom" id="g3W-uK-Nog"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="21.739130434782609" y="-407.14285714285711"/>
+        </view>
+    </objects>
+</document>
