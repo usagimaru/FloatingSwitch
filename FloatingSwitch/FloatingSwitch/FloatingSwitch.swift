@@ -24,9 +24,9 @@ class FloatingSwitch: UIView, NibInstantiatable {
 	var animateFocusMoving: Bool = false
 	var focusedIndex: Int = 0 {
 		didSet {
-			let tabCount = self.stackView.arrangedSubviews.count
-			if focusedIndex >= tabCount {
-				focusedIndex = (tabCount > 0) ? tabCount - 1 : 0
+			let segmentCount = self.stackView.arrangedSubviews.count
+			if focusedIndex >= segmentCount {
+				focusedIndex = (segmentCount > 0) ? segmentCount - 1 : 0
 			}
 			
 			setNeedsLayout()
@@ -118,12 +118,12 @@ class FloatingSwitch: UIView, NibInstantiatable {
 		self.knob.layer.cornerRadius = self.backgroundView.layer.cornerRadius - (self.backgroundView.bounds.height - self.knob.bounds.height) / 2
 		
 		if self.focusedIndex < self.segments.count {
-			let targetTab = self.segments[self.focusedIndex]
-			let targetTabFrame = convert(targetTab.frame, from: targetTab.superview)
+			let targetSegment = self.segments[self.focusedIndex]
+			let targetFrame = convert(targetSegment.frame, from: targetSegment.superview)
 			
 			self.knob.isHidden = false
-			self.knobWidthConstraint.constant = max(targetTabFrame.width, self.knob.height)
-			self.knobXMarginConstraint.constant = targetTabFrame.origin.x
+			self.knobWidthConstraint.constant = max(targetFrame.width, self.knob.height)
+			self.knobXMarginConstraint.constant = targetFrame.origin.x
 			
 			// Animate constraints
 			if self.animateFocusMoving {
@@ -133,10 +133,10 @@ class FloatingSwitch: UIView, NibInstantiatable {
 			}
 			
 			// Button Title Colors
-			targetTab.setActiveColor()
+			targetSegment.setActiveColor()
 			
-			for tab in self.segments where tab != targetTab {
-				tab.setInactiveColor()
+			for segment in self.segments where segment != targetSegment {
+				segment.setInactiveColor()
 			}
 		}
 		else {
@@ -146,10 +146,10 @@ class FloatingSwitch: UIView, NibInstantiatable {
 		}
 	}
 	
-	private func index(of tab: FloatingSwitchSegment) -> Int? {
-		let tabs = self.segments
-		if tabs.contains(tab) {
-			return tabs.firstIndex(of: tab)
+	private func index(of segment: FloatingSwitchSegment) -> Int? {
+		let segments = self.segments
+		if segments.contains(segment) {
+			return segments.firstIndex(of: segment)
 		}
 		return nil
 	}
@@ -157,28 +157,28 @@ class FloatingSwitch: UIView, NibInstantiatable {
 	
 	// MARK: -
 	
-	func setTabs(with titles: [String]) {
-		removeAllTabs()
+	func setSegments(with titles: [String]) {
+		removeAllSegments()
 		
 		titles.forEach {
-			let tab: FloatingSwitchSegment = FloatingSwitchSegment.fromNib()
-			tab.tabBar = self
-			tab.title = $0
-			self.stackView.addArrangedSubview(tab)
+			let segment: FloatingSwitchSegment = FloatingSwitchSegment.fromNib()
+			segment.floatingSwitch = self
+			segment.title = $0
+			self.stackView.addArrangedSubview(segment)
 		}
 		
 		//setNeedsLayout()
 	}
 	
-	func removeAllTabs() {
+	func removeAllSegments() {
 		self.segments.forEach {
 			$0.removeFromSuperview()
 		}
 	}
 	
-	func select(tab: FloatingSwitchSegment) {
-		if let tabIndex = index(of: tab) {
-			self.focusedIndex = tabIndex
+	func select(segment: FloatingSwitchSegment) {
+		if let segmentIndex = index(of: segment) {
+			self.focusedIndex = segmentIndex
 			
 			if let action = self.action {
 				UIApplication.shared.sendAction(action, to: self.target, from: self, for: nil)

@@ -37,10 +37,10 @@ class FloatingSwitchSegment: UIView, NibInstantiatable {
 		}
 	}
 	
-	weak var tabBar: FloatingSwitch?
+	weak var floatingSwitch: FloatingSwitch?
 	
 	@IBAction func tapped(_ sender: UIButton) {
-		self.tabBar?.select(tab: self)
+		self.floatingSwitch?.select(segment: self)
 	}
 	
 	func setActiveColor() {
