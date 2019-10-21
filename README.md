@@ -19,7 +19,7 @@ A replication of a segmented control in the iOS 13 Photos.app.
 1. Install a custom view on Interface Builder.
 2. Assign the custom view class as `FloatingSwitch`.
 3. Set an appropriate layouts. In the default implementation of FloatingSwitch, the width follows the intrinsic size.
-4. Set segments with `setSegments (with:)` method.
+4. Set segments with `setSegments(with:)` method.
 5. Set `target` and `action`. Then you can catch control events when users switch segments.
 
 See `SampleViewController.swift` for usage.
