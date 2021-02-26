@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FloatingSwitch: UIView, NibInstantiatable {
+class FloatingSwitch: UIView {
 
 	@IBOutlet private weak var stackView: UIStackView!
 	@IBOutlet private weak var backgroundView: UIVisualEffectView!
@@ -17,11 +17,14 @@ class FloatingSwitch: UIView, NibInstantiatable {
 	@IBOutlet private weak var knobWidthConstraint: NSLayoutConstraint!
 	
 	private var knobXMargin: CGFloat = 0
+	private var isNibLoaded = false
 	
 	weak var target: NSObject?
 	var action: Selector?
 	
-	var animateFocusMoving: Bool = false
+	var animatesFocusMoving: Bool = true
+	private var animatesFocusMoving_internal: Bool = false
+	
 	var focusedIndex: Int = 0 {
 		didSet {
 			let segmentCount = self.stackView.arrangedSubviews.count
@@ -37,40 +40,51 @@ class FloatingSwitch: UIView, NibInstantiatable {
 		return self.stackView.arrangedSubviews as? [FloatingSwitchSegment] ?? []
 	}
 	
+	override var intrinsicContentSize: CGSize {
+		// セグメントが空の時は高さを横幅に採用
+		if self.segments.isEmpty {
+			return CGSize(width: self.frame.height, height: UIView.noIntrinsicMetric)
+		}
+		
+		// スタックの最小幅＋マージン
+		let width = self.stackView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).width + self.stackView.frame.minX * 2
+		return CGSize(width: width, height: UIView.noIntrinsicMetric)
+	}
+	
 	
 	// MARK: -
 	
-	override init(frame: CGRect) {
-		super.init(frame: frame)
-		_init()
-	}
-	
-	required init?(coder: NSCoder) {
-		super.init(coder: coder)
-		_init()
-	}
-	
-	private func _init() {
+	convenience init() {
+		self.init(frame: .zero)
 		loadNib()
 	}
 	
 	private func loadNib() {
-		let view = FloatingSwitch.fromNib(inBundle: nil, filesOwner: self)
-		addSubview(view)
+		defer {
+			self.isNibLoaded = true
+		}
+		if self.isNibLoaded {
+			return
+		}
 		
-		view.translatesAutoresizingMaskIntoConstraints = false
-		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[view]-0-|",
+		let nib = UINib(nibName: "\(Self.self)", bundle: nil)
+		let objs = nib.instantiate(withOwner: self, options: nil)
+		
+		guard let contentView = objs.first as? UIView else {
+			fatalError("Initializing error")
+		}
+		
+		contentView.translatesAutoresizingMaskIntoConstraints = false
+		addSubview(contentView)
+		
+		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[contentView]-0-|",
 													  options: NSLayoutConstraint.FormatOptions(rawValue: 0),
 													  metrics: nil,
-													  views: ["view" : view]))
-		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[view]-0-|",
+													  views: ["contentView" : contentView]))
+		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[contentView]-0-|",
 													  options: NSLayoutConstraint.FormatOptions(rawValue: 0),
 													  metrics: nil,
-													  views: ["view" : view]))
-	}
-	
-	override func awakeFromNib() {
-		super.awakeFromNib()
+													  views: ["contentView" : contentView]))
 		
 		self.backgroundView.layer.cornerCurve = .continuous
 		self.backgroundView.clipsToBounds = true
@@ -82,32 +96,35 @@ class FloatingSwitch: UIView, NibInstantiatable {
 		setNeedsLayout()
 	}
 	
-	override var intrinsicContentSize: CGSize {
-		// セグメントが空の時は高さを横幅に採用
-		if self.segments.isEmpty {
-			return CGSize(width: self.height, height: UIView.noIntrinsicMetric)
-		}
-		
-		// スタックの最小幅＋マージン
-		let width = self.stackView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).width + self.stackView.x * 2
-		return CGSize(width: width, height: UIView.noIntrinsicMetric)
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		loadNib()
 	}
 	
 	override func prepareForInterfaceBuilder() {
+		super.prepareForInterfaceBuilder()
+		loadNib()
 		invalidateIntrinsicContentSize()
+	}
+	
+	override func didMoveToSuperview() {
+		//self.animatesFocusMoving_internal = true
 	}
 	
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		
-		// Prepare to fix the layout first
+		// Prepare to fix the layout first.
 		self.layoutIfNeeded()
 
-		// Corner Radius of the Background View
+		// Corner Radius of the Background View.
 		self.backgroundView.layer.cornerRadius = self.backgroundView.bounds.height / 2
 		
-		// Update Focus Layout and Appearances
+		// Update Focus Layout and Appearances.
 		updateFocus()
+		
+		// Disable the focus animation for the first time only.
+		self.animatesFocusMoving_internal = true
 	}
 	
 	
@@ -122,11 +139,11 @@ class FloatingSwitch: UIView, NibInstantiatable {
 			let targetFrame = convert(targetSegment.frame, from: targetSegment.superview)
 			
 			self.knob.isHidden = false
-			self.knobWidthConstraint.constant = max(targetFrame.width, self.knob.height)
+			self.knobWidthConstraint.constant = max(targetFrame.width, self.knob.frame.height)
 			self.knobXMarginConstraint.constant = targetFrame.origin.x
 			
 			// Animate constraints
-			if self.animateFocusMoving {
+			if self.animatesFocusMoving && self.animatesFocusMoving_internal {
 				UIView.animateWithSystemMotion({
 					self.backgroundView.layoutIfNeeded()
 				}, completion: nil)
@@ -141,7 +158,7 @@ class FloatingSwitch: UIView, NibInstantiatable {
 		}
 		else {
 			self.knob.isHidden = true
-			self.knobWidthConstraint.constant = self.knob.height
+			self.knobWidthConstraint.constant = self.knob.frame.height
 			self.knobXMarginConstraint.constant = self.knobXMargin
 		}
 	}
@@ -157,14 +174,22 @@ class FloatingSwitch: UIView, NibInstantiatable {
 	
 	// MARK: -
 	
+	func set(target: NSObject?, action: Selector) {
+		self.target = target
+		self.action = action
+	}
+	
+	
+	// MARK: -
+	
 	func setSegments(with titles: [String]) {
 		removeAllSegments()
 		
 		titles.forEach {
-			let segment: FloatingSwitchSegment = FloatingSwitchSegment.fromNib()
+			let segment = FloatingSwitchSegment()
+			self.stackView.addArrangedSubview(segment)
 			segment.floatingSwitch = self
 			segment.title = $0
-			self.stackView.addArrangedSubview(segment)
 		}
 		
 		//setNeedsLayout()
@@ -176,14 +201,43 @@ class FloatingSwitch: UIView, NibInstantiatable {
 		}
 	}
 	
-	func select(segment: FloatingSwitchSegment) {
+	func select(segment: FloatingSwitchSegment, animated: Bool, sendsAction: Bool = false) {
 		if let segmentIndex = index(of: segment) {
+			self.animatesFocusMoving_internal = animated
 			self.focusedIndex = segmentIndex
 			
-			if let action = self.action {
+			if let action = self.action, sendsAction {
 				UIApplication.shared.sendAction(action, to: self.target, from: self, for: nil)
 			}
 		}
 	}
+	
+	func select(segmentAt index: Int, animated: Bool, sendsAction: Bool = false) {
+		if index < self.segments.count {
+			self.animatesFocusMoving_internal = animated
+			self.focusedIndex = index
+			
+			if let action = self.action, sendsAction {
+				UIApplication.shared.sendAction(action, to: self.target, from: self, for: nil)
+			}
+		}
+	}
+	
+	func focusedSegment() -> FloatingSwitchSegment {
+		return self.segments[self.focusedIndex]
+	}
 
+}
+
+extension UIView {
+	
+	/// iOSの標準的な動きを再現します
+	class func animateWithSystemMotion(_ animations: (() -> Void)?, completion: ((Bool) -> Void)?) {
+		UIView.perform(.delete,
+					   on: [],
+					   options: [.beginFromCurrentState, .allowUserInteraction],
+					   animations: animations,
+					   completion: completion)
+	}
+	
 }

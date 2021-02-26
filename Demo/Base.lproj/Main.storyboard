@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,6 +82,13 @@
                                     <constraint firstAttribute="bottom" secondItem="8hX-7s-at8" secondAttribute="bottom" id="uhW-Oz-tHF"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWJ-YN-3zw" userLabel="Floating Switch3" customClass="FloatingSwitch" customModule="FloatingSwitch" customModuleProvider="target">
+                                <rect key="frame" x="12" y="736" width="390" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8BS-gZ-xxE"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYq-q2-yKK" customClass="FloatingSwitch" customModule="FloatingSwitch" customModuleProvider="target">
                                 <rect key="frame" x="12" y="796" width="390" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,7 +97,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfi-rV-0M3" customClass="FloatingSwitch" customModule="FloatingSwitch" customModuleProvider="target">
-                                <rect key="frame" x="302" y="736" width="100" height="40"/>
+                                <rect key="frame" x="157" y="132" width="100" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" placeholder="YES" id="1b8-iG-4cN"/>
@@ -104,25 +113,29 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="WIG-b4-biq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="OaK-jh-FA2" secondAttribute="trailing" id="3bd-Wl-UlW"/>
                             <constraint firstItem="OaK-jh-FA2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3j6-Kg-LXi"/>
-                            <constraint firstAttribute="trailing" secondItem="NYq-q2-yKK" secondAttribute="trailing" constant="12" id="Ayf-Wn-Fpd"/>
+                            <constraint firstItem="WIG-b4-biq" firstAttribute="trailing" secondItem="NYq-q2-yKK" secondAttribute="trailing" constant="12" id="Ayf-Wn-Fpd"/>
+                            <constraint firstItem="kfi-rV-0M3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cnp-ky-pKK"/>
                             <constraint firstItem="bhc-8s-h47" firstAttribute="top" secondItem="WIG-b4-biq" secondAttribute="top" constant="8" id="Fg9-U4-g1b"/>
-                            <constraint firstItem="NYq-q2-yKK" firstAttribute="top" secondItem="kfi-rV-0M3" secondAttribute="bottom" constant="20" id="WR8-jd-6Hy"/>
-                            <constraint firstItem="NYq-q2-yKK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="aTV-r0-NNI"/>
-                            <constraint firstItem="WIG-b4-biq" firstAttribute="trailing" secondItem="kfi-rV-0M3" secondAttribute="trailing" constant="12" id="iA1-Z0-Id5"/>
+                            <constraint firstItem="NYq-q2-yKK" firstAttribute="top" secondItem="fWJ-YN-3zw" secondAttribute="bottom" constant="20" id="U6M-xM-T8U"/>
+                            <constraint firstItem="NYq-q2-yKK" firstAttribute="leading" secondItem="WIG-b4-biq" secondAttribute="leading" constant="12" id="aTV-r0-NNI"/>
+                            <constraint firstItem="WIG-b4-biq" firstAttribute="trailing" secondItem="fWJ-YN-3zw" secondAttribute="trailing" constant="12" id="erh-9l-Jdv"/>
+                            <constraint firstItem="kfi-rV-0M3" firstAttribute="top" secondItem="bhc-8s-h47" secondAttribute="bottom" constant="20" id="hWI-hx-kfI"/>
+                            <constraint firstItem="fWJ-YN-3zw" firstAttribute="leading" secondItem="WIG-b4-biq" secondAttribute="leading" constant="12" id="ncy-65-UgD"/>
                             <constraint firstAttribute="bottom" secondItem="OaK-jh-FA2" secondAttribute="bottom" id="rAt-IQ-3Kx"/>
                             <constraint firstItem="OaK-jh-FA2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rob-h7-rhd"/>
                             <constraint firstItem="bhc-8s-h47" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yA8-bx-CF2"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="NYq-q2-yKK" secondAttribute="bottom" constant="60" id="ysZ-K6-lZM"/>
+                            <constraint firstItem="WIG-b4-biq" firstAttribute="bottom" secondItem="NYq-q2-yKK" secondAttribute="bottom" constant="26" id="ysZ-K6-lZM"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="WIG-b4-biq"/>
                     </view>
                     <connections>
                         <outlet property="floatingSwitch1" destination="NYq-q2-yKK" id="RED-I4-Rmy"/>
                         <outlet property="floatingSwitch2" destination="bhc-8s-h47" id="9II-Hr-UIC"/>
+                        <outlet property="floatingSwitch3" destination="fWJ-YN-3zw" id="aYd-cO-Rnp"/>
                         <outlet property="interfaceStyleSwitch" destination="kfi-rV-0M3" id="8sZ-0o-Vm5"/>
                     </connections>
                 </viewController>
@@ -140,5 +153,8 @@
         <image name="image6" width="533.33331298828125" height="355.33334350585938"/>
         <image name="image7" width="533.33331298828125" height="356"/>
         <image name="image8" width="533.33331298828125" height="400"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

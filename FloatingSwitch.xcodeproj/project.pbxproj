@@ -7,30 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51819F6823511D76006E5ECD /* NibInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51819F6623511D76006E5ECD /* NibInstantiatable.swift */; };
-		51819F6B23512645006E5ECD /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51819F6A23512645006E5ECD /* UIView.swift */; };
-		51819F702352410F006E5ECD /* FloatingSwitchSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51819F6E2352410E006E5ECD /* FloatingSwitchSegment.swift */; };
-		51819F712352410F006E5ECD /* FloatingSwitchSegment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51819F6F2352410F006E5ECD /* FloatingSwitchSegment.xib */; };
+		511FB24725E97E70004F2260 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511FB24025E97E70004F2260 /* String.swift */; };
 		51819F74235250A7006E5ECD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 51819F76235250A7006E5ECD /* Localizable.strings */; };
-		51819F7B23525136006E5ECD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51819F7A23525136006E5ECD /* String.swift */; };
+		51BE6F5D25E9808F00FB15C8 /* FloatingSwitchSegment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BE6F5725E9808F00FB15C8 /* FloatingSwitchSegment.xib */; };
+		51BE6F5E25E9808F00FB15C8 /* FloatingSwitchSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BE6F5825E9808F00FB15C8 /* FloatingSwitchSegment.swift */; };
+		51BE6F5F25E9808F00FB15C8 /* FloatingSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BE6F5925E9808F00FB15C8 /* FloatingSwitch.swift */; };
+		51BE6F6025E9808F00FB15C8 /* FloatingSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BE6F5A25E9808F00FB15C8 /* FloatingSwitch.xib */; };
 		51FF00B42351102200AEC536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FF00B32351102200AEC536 /* AppDelegate.swift */; };
 		51FF00B62351102200AEC536 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FF00B52351102200AEC536 /* SceneDelegate.swift */; };
 		51FF00B82351102200AEC536 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FF00B72351102200AEC536 /* SampleViewController.swift */; };
 		51FF00BB2351102200AEC536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51FF00B92351102200AEC536 /* Main.storyboard */; };
 		51FF00BD2351102300AEC536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51FF00BC2351102300AEC536 /* Assets.xcassets */; };
 		51FF00C02351102300AEC536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51FF00BE2351102300AEC536 /* LaunchScreen.storyboard */; };
-		51FF00C8235111EE00AEC536 /* FloatingSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FF00C7235111EE00AEC536 /* FloatingSwitch.xib */; };
-		51FF00CA2351120000AEC536 /* FloatingSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FF00C92351120000AEC536 /* FloatingSwitch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		51819F6623511D76006E5ECD /* NibInstantiatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInstantiatable.swift; sourceTree = "<group>"; };
-		51819F6A23512645006E5ECD /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		51819F6E2352410E006E5ECD /* FloatingSwitchSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingSwitchSegment.swift; sourceTree = "<group>"; };
-		51819F6F2352410F006E5ECD /* FloatingSwitchSegment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FloatingSwitchSegment.xib; sourceTree = "<group>"; };
+		511FB24025E97E70004F2260 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		51819F75235250A7006E5ECD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		51819F77235250BF006E5ECD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		51819F7A23525136006E5ECD /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		51BE6F5725E9808F00FB15C8 /* FloatingSwitchSegment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FloatingSwitchSegment.xib; sourceTree = "<group>"; };
+		51BE6F5825E9808F00FB15C8 /* FloatingSwitchSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingSwitchSegment.swift; sourceTree = "<group>"; };
+		51BE6F5925E9808F00FB15C8 /* FloatingSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingSwitch.swift; sourceTree = "<group>"; };
+		51BE6F5A25E9808F00FB15C8 /* FloatingSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FloatingSwitch.xib; sourceTree = "<group>"; };
 		51FF00B02351102200AEC536 /* FloatingSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloatingSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FF00B32351102200AEC536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51FF00B52351102200AEC536 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,8 +37,6 @@
 		51FF00BC2351102300AEC536 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51FF00BF2351102300AEC536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51FF00C12351102300AEC536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		51FF00C7235111EE00AEC536 /* FloatingSwitch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingSwitch.xib; sourceTree = "<group>"; };
-		51FF00C92351120000AEC536 /* FloatingSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingSwitch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,32 +50,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		51819F6C2351442B006E5ECD /* Category */ = {
+		51BE6F5325E9808F00FB15C8 /* FloatingSwitch */ = {
 			isa = PBXGroup;
 			children = (
-				51819F6A23512645006E5ECD /* UIView.swift */,
-				51819F6623511D76006E5ECD /* NibInstantiatable.swift */,
-				51819F7A23525136006E5ECD /* String.swift */,
+				51BE6F5925E9808F00FB15C8 /* FloatingSwitch.swift */,
+				51BE6F5A25E9808F00FB15C8 /* FloatingSwitch.xib */,
+				51BE6F5825E9808F00FB15C8 /* FloatingSwitchSegment.swift */,
+				51BE6F5725E9808F00FB15C8 /* FloatingSwitchSegment.xib */,
 			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		51819F6D2351443B006E5ECD /* FloatingSwitch */ = {
-			isa = PBXGroup;
-			children = (
-				51FF00C7235111EE00AEC536 /* FloatingSwitch.xib */,
-				51FF00C92351120000AEC536 /* FloatingSwitch.swift */,
-				51819F6F2352410F006E5ECD /* FloatingSwitchSegment.xib */,
-				51819F6E2352410E006E5ECD /* FloatingSwitchSegment.swift */,
-				51819F6C2351442B006E5ECD /* Category */,
-			);
-			path = FloatingSwitch;
+			name = FloatingSwitch;
+			path = Sources/FloatingSwitch;
 			sourceTree = "<group>";
 		};
 		51FF00A72351102200AEC536 = {
 			isa = PBXGroup;
 			children = (
-				51FF00B22351102200AEC536 /* FloatingSwitch */,
+				51FF00B22351102200AEC536 /* Demo */,
+				51BE6F5325E9808F00FB15C8 /* FloatingSwitch */,
 				51FF00B12351102200AEC536 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,20 +79,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		51FF00B22351102200AEC536 /* FloatingSwitch */ = {
+		51FF00B22351102200AEC536 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
 				51FF00B32351102200AEC536 /* AppDelegate.swift */,
 				51FF00B52351102200AEC536 /* SceneDelegate.swift */,
 				51FF00B92351102200AEC536 /* Main.storyboard */,
 				51FF00B72351102200AEC536 /* SampleViewController.swift */,
-				51819F6D2351443B006E5ECD /* FloatingSwitch */,
+				511FB24025E97E70004F2260 /* String.swift */,
 				51FF00BC2351102300AEC536 /* Assets.xcassets */,
 				51FF00BE2351102300AEC536 /* LaunchScreen.storyboard */,
 				51FF00C12351102300AEC536 /* Info.plist */,
 				51819F76235250A7006E5ECD /* Localizable.strings */,
 			);
-			path = FloatingSwitch;
+			path = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +122,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = usagimaru;
 				TargetAttributes = {
 					51FF00AF2351102200AEC536 = {
@@ -170,9 +157,9 @@
 				51FF00C02351102300AEC536 /* LaunchScreen.storyboard in Resources */,
 				51819F74235250A7006E5ECD /* Localizable.strings in Resources */,
 				51FF00BD2351102300AEC536 /* Assets.xcassets in Resources */,
+				51BE6F6025E9808F00FB15C8 /* FloatingSwitch.xib in Resources */,
 				51FF00BB2351102200AEC536 /* Main.storyboard in Resources */,
-				51FF00C8235111EE00AEC536 /* FloatingSwitch.xib in Resources */,
-				51819F712352410F006E5ECD /* FloatingSwitchSegment.xib in Resources */,
+				51BE6F5D25E9808F00FB15C8 /* FloatingSwitchSegment.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,14 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51819F6B23512645006E5ECD /* UIView.swift in Sources */,
-				51819F6823511D76006E5ECD /* NibInstantiatable.swift in Sources */,
 				51FF00B82351102200AEC536 /* SampleViewController.swift in Sources */,
+				51BE6F5E25E9808F00FB15C8 /* FloatingSwitchSegment.swift in Sources */,
+				511FB24725E97E70004F2260 /* String.swift in Sources */,
+				51BE6F5F25E9808F00FB15C8 /* FloatingSwitch.swift in Sources */,
 				51FF00B42351102200AEC536 /* AppDelegate.swift in Sources */,
 				51FF00B62351102200AEC536 /* SceneDelegate.swift in Sources */,
-				51FF00CA2351120000AEC536 /* FloatingSwitch.swift in Sources */,
-				51819F7B23525136006E5ECD /* String.swift in Sources */,
-				51819F702352410F006E5ECD /* FloatingSwitchSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +237,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -313,6 +299,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -345,15 +332,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6RZ6S2FLK;
-				INFOPLIST_FILE = FloatingSwitch/Info.plist;
+				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.interactionmania.FloatingSwitch;
+				PRODUCT_BUNDLE_IDENTIFIER = usagimaru.FloatingSwitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,15 +352,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6RZ6S2FLK;
-				INFOPLIST_FILE = FloatingSwitch/Info.plist;
+				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.interactionmania.FloatingSwitch;
+				PRODUCT_BUNDLE_IDENTIFIER = usagimaru.FloatingSwitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
