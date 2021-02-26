@@ -19,13 +19,13 @@ public class FloatingSwitchView: UIView {
 	private var knobXMargin: CGFloat = 0
 	private var isNibLoaded = false
 	
-	weak var target: NSObject?
-	var action: Selector?
+	public weak var target: NSObject?
+	public var action: Selector?
 	
-	var animatesFocusMoving: Bool = true
+	public var animatesFocusMoving: Bool = true
 	private var animatesFocusMoving_internal: Bool = false
 	
-	var focusedIndex: Int = 0 {
+	public var focusedIndex: Int = 0 {
 		didSet {
 			let segmentCount = self.stackView.arrangedSubviews.count
 			if focusedIndex >= segmentCount {
@@ -36,7 +36,7 @@ public class FloatingSwitchView: UIView {
 		}
 	}
 	
-	var segments: [FloatingSwitchSegment] {
+	public var segments: [FloatingSwitchSegment] {
 		return self.stackView.arrangedSubviews as? [FloatingSwitchSegment] ?? []
 	}
 	
@@ -54,7 +54,7 @@ public class FloatingSwitchView: UIView {
 	
 	// MARK: -
 	
-	convenience init() {
+	public convenience init() {
 		self.init(frame: .zero)
 		loadNib()
 	}
@@ -180,7 +180,7 @@ public class FloatingSwitchView: UIView {
 	
 	// MARK: -
 	
-	func set(target: NSObject?, action: Selector) {
+	public func set(target: NSObject?, action: Selector) {
 		self.target = target
 		self.action = action
 	}
@@ -188,7 +188,7 @@ public class FloatingSwitchView: UIView {
 	
 	// MARK: -
 	
-	func setSegments(with titles: [String]) {
+	public func setSegments(with titles: [String]) {
 		removeAllSegments()
 		
 		titles.forEach {
@@ -201,13 +201,13 @@ public class FloatingSwitchView: UIView {
 		//setNeedsLayout()
 	}
 	
-	func removeAllSegments() {
+	public func removeAllSegments() {
 		self.segments.forEach {
 			$0.removeFromSuperview()
 		}
 	}
 	
-	func select(segment: FloatingSwitchSegment, animated: Bool, sendsAction: Bool = false) {
+	public func select(segment: FloatingSwitchSegment, animated: Bool, sendsAction: Bool = false) {
 		if let segmentIndex = index(of: segment) {
 			self.animatesFocusMoving_internal = animated
 			self.focusedIndex = segmentIndex
@@ -218,7 +218,7 @@ public class FloatingSwitchView: UIView {
 		}
 	}
 	
-	func select(segmentAt index: Int, animated: Bool, sendsAction: Bool = false) {
+	public func select(segmentAt index: Int, animated: Bool, sendsAction: Bool = false) {
 		if index < self.segments.count {
 			self.animatesFocusMoving_internal = animated
 			self.focusedIndex = index
@@ -229,7 +229,7 @@ public class FloatingSwitchView: UIView {
 		}
 	}
 	
-	func focusedSegment() -> FloatingSwitchSegment {
+	public func focusedSegment() -> FloatingSwitchSegment {
 		return self.segments[self.focusedIndex]
 	}
 

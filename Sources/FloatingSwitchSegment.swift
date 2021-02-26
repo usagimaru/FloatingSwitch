@@ -10,9 +10,9 @@ import UIKit
 
 public class FloatingSwitchSegment: UIView {
 
-	@IBOutlet weak var button: UIButton!
+	@IBOutlet public weak var button: UIButton!
 	
-	var title: String? {
+	public var title: String? {
 		get {
 			return self.button.currentTitle
 		}
@@ -21,9 +21,9 @@ public class FloatingSwitchSegment: UIView {
 		}
 	}
 	
-	var animatesTitleColor: Bool = true
+	public var animatesTitleColor: Bool = true
 	
-	var titleColor: UIColor? {
+	public var titleColor: UIColor? {
 		get {
 			return self.button.titleColor(for: .normal)
 		}
@@ -38,11 +38,11 @@ public class FloatingSwitchSegment: UIView {
 		}
 	}
 	
-	weak var floatingSwitchView: FloatingSwitchView?
+	public weak var floatingSwitchView: FloatingSwitchView?
 	
 	private var isNibLoaded = false
 	
-	var contentInsets: UIEdgeInsets {
+	public var contentInsets: UIEdgeInsets {
 		get {
 			return self.button.contentEdgeInsets
 		}
@@ -54,7 +54,7 @@ public class FloatingSwitchSegment: UIView {
 	
 	// MARK: -
 	
-	required convenience init() {
+	public required convenience init() {
 		self.init(frame: .zero)
 		loadNib()
 	}
@@ -104,11 +104,11 @@ public class FloatingSwitchSegment: UIView {
 		self.floatingSwitchView?.select(segment: self, animated: true, sendsAction: true)
 	}
 	
-	func setActiveColor() {
+	public func setActiveColor() {
 		self.titleColor = UIColor.white
 	}
 	
-	func setInactiveColor() {
+	public func setInactiveColor() {
 		self.titleColor = UIColor.secondaryLabel
 	}
 	
