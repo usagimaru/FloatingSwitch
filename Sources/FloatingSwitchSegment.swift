@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FloatingSwitchSegment: UIView {
+public class FloatingSwitchSegment: UIView {
 
 	@IBOutlet weak var button: UIButton!
 	
@@ -95,7 +95,7 @@ class FloatingSwitchSegment: UIView {
 		self.contentInsets = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
 	}
 	
-	override func awakeFromNib() {
+	public override func awakeFromNib() {
 		super.awakeFromNib()
 		loadNib()
 	}

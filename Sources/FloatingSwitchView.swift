@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FloatingSwitchView: UIView {
+public class FloatingSwitchView: UIView {
 
 	@IBOutlet private weak var stackView: UIStackView!
 	@IBOutlet private weak var backgroundView: UIVisualEffectView!
@@ -40,7 +40,7 @@ class FloatingSwitchView: UIView {
 		return self.stackView.arrangedSubviews as? [FloatingSwitchSegment] ?? []
 	}
 	
-	override var intrinsicContentSize: CGSize {
+	public override var intrinsicContentSize: CGSize {
 		// セグメントが空の時は高さを横幅に採用
 		if self.segments.isEmpty {
 			return CGSize(width: self.frame.height, height: UIView.noIntrinsicMetric)
@@ -102,22 +102,22 @@ class FloatingSwitchView: UIView {
 		setNeedsLayout()
 	}
 	
-	override func awakeFromNib() {
+	public override func awakeFromNib() {
 		super.awakeFromNib()
 		loadNib()
 	}
 	
-	override func prepareForInterfaceBuilder() {
+	public override func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()
 		loadNib()
 		invalidateIntrinsicContentSize()
 	}
 	
-	override func didMoveToSuperview() {
+	public override func didMoveToSuperview() {
 		//self.animatesFocusMoving_internal = true
 	}
 	
-	override func layoutSubviews() {
+	public override func layoutSubviews() {
 		super.layoutSubviews()
 		
 		// Prepare to fix the layout first.

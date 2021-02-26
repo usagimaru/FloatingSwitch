@@ -53,10 +53,10 @@
 		51BE6F9925E9A86D00FB15C8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				51BE6F9A25E9A86D00FB15C8 /* FloatingSwitchSegment.xib */,
-				51BE6F9B25E9A86D00FB15C8 /* FloatingSwitchSegment.swift */,
 				51BE6F9C25E9A86D00FB15C8 /* FloatingSwitchView.xib */,
 				51BE6F9D25E9A86D00FB15C8 /* FloatingSwitchView.swift */,
+				51BE6F9A25E9A86D00FB15C8 /* FloatingSwitchSegment.xib */,
+				51BE6F9B25E9A86D00FB15C8 /* FloatingSwitchSegment.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
