@@ -10,10 +10,10 @@ import UIKit
 
 class SampleViewController: UIViewController {
 
-	@IBOutlet weak var floatingSwitch1: FloatingSwitch!
-	@IBOutlet weak var floatingSwitch2: FloatingSwitch!
-	@IBOutlet weak var floatingSwitch3: FloatingSwitch!
-	@IBOutlet weak var interfaceStyleSwitch: FloatingSwitch!
+	@IBOutlet weak var floatingSwitch1: FloatingSwitchView!
+	@IBOutlet weak var floatingSwitch2: FloatingSwitchView!
+	@IBOutlet weak var floatingSwitch3: FloatingSwitchView!
+	@IBOutlet weak var interfaceStyleSwitch: FloatingSwitchView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -66,7 +66,7 @@ class SampleViewController: UIViewController {
 	
 	// MARK: -
 	
-	@objc func segmentChanged(_ sender: FloatingSwitch) {
+	@objc func segmentChanged(_ sender: FloatingSwitchView) {
 		switch sender {
 		case self.floatingSwitch1:
 			self.floatingSwitch3.select(segmentAt: sender.focusedIndex, animated: true)

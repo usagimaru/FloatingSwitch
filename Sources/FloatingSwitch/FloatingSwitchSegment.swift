@@ -38,7 +38,7 @@ class FloatingSwitchSegment: UIView {
 		}
 	}
 	
-	weak var floatingSwitch: FloatingSwitch?
+	weak var floatingSwitchView: FloatingSwitchView?
 	
 	private var isNibLoaded = false
 	
@@ -95,7 +95,7 @@ class FloatingSwitchSegment: UIView {
 	}
 	
 	@IBAction func tapped(_ sender: UIButton) {
-		self.floatingSwitch?.select(segment: self, animated: true, sendsAction: true)
+		self.floatingSwitchView?.select(segment: self, animated: true, sendsAction: true)
 	}
 	
 	func setActiveColor() {

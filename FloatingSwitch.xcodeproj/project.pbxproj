@@ -11,8 +11,8 @@
 		51819F74235250A7006E5ECD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 51819F76235250A7006E5ECD /* Localizable.strings */; };
 		51BE6F5D25E9808F00FB15C8 /* FloatingSwitchSegment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BE6F5725E9808F00FB15C8 /* FloatingSwitchSegment.xib */; };
 		51BE6F5E25E9808F00FB15C8 /* FloatingSwitchSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BE6F5825E9808F00FB15C8 /* FloatingSwitchSegment.swift */; };
-		51BE6F5F25E9808F00FB15C8 /* FloatingSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BE6F5925E9808F00FB15C8 /* FloatingSwitch.swift */; };
-		51BE6F6025E9808F00FB15C8 /* FloatingSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BE6F5A25E9808F00FB15C8 /* FloatingSwitch.xib */; };
+		51BE6F5F25E9808F00FB15C8 /* FloatingSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BE6F5925E9808F00FB15C8 /* FloatingSwitchView.swift */; };
+		51BE6F6025E9808F00FB15C8 /* FloatingSwitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BE6F5A25E9808F00FB15C8 /* FloatingSwitchView.xib */; };
 		51FF00B42351102200AEC536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FF00B32351102200AEC536 /* AppDelegate.swift */; };
 		51FF00B62351102200AEC536 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FF00B52351102200AEC536 /* SceneDelegate.swift */; };
 		51FF00B82351102200AEC536 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FF00B72351102200AEC536 /* SampleViewController.swift */; };
@@ -27,8 +27,8 @@
 		51819F77235250BF006E5ECD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		51BE6F5725E9808F00FB15C8 /* FloatingSwitchSegment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FloatingSwitchSegment.xib; sourceTree = "<group>"; };
 		51BE6F5825E9808F00FB15C8 /* FloatingSwitchSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingSwitchSegment.swift; sourceTree = "<group>"; };
-		51BE6F5925E9808F00FB15C8 /* FloatingSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingSwitch.swift; sourceTree = "<group>"; };
-		51BE6F5A25E9808F00FB15C8 /* FloatingSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FloatingSwitch.xib; sourceTree = "<group>"; };
+		51BE6F5925E9808F00FB15C8 /* FloatingSwitchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingSwitchView.swift; sourceTree = "<group>"; };
+		51BE6F5A25E9808F00FB15C8 /* FloatingSwitchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FloatingSwitchView.xib; sourceTree = "<group>"; };
 		51FF00B02351102200AEC536 /* FloatingSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloatingSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FF00B32351102200AEC536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51FF00B52351102200AEC536 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,8 +53,8 @@
 		51BE6F5325E9808F00FB15C8 /* FloatingSwitch */ = {
 			isa = PBXGroup;
 			children = (
-				51BE6F5925E9808F00FB15C8 /* FloatingSwitch.swift */,
-				51BE6F5A25E9808F00FB15C8 /* FloatingSwitch.xib */,
+				51BE6F5925E9808F00FB15C8 /* FloatingSwitchView.swift */,
+				51BE6F5A25E9808F00FB15C8 /* FloatingSwitchView.xib */,
 				51BE6F5825E9808F00FB15C8 /* FloatingSwitchSegment.swift */,
 				51BE6F5725E9808F00FB15C8 /* FloatingSwitchSegment.xib */,
 			);
@@ -157,7 +157,7 @@
 				51FF00C02351102300AEC536 /* LaunchScreen.storyboard in Resources */,
 				51819F74235250A7006E5ECD /* Localizable.strings in Resources */,
 				51FF00BD2351102300AEC536 /* Assets.xcassets in Resources */,
-				51BE6F6025E9808F00FB15C8 /* FloatingSwitch.xib in Resources */,
+				51BE6F6025E9808F00FB15C8 /* FloatingSwitchView.xib in Resources */,
 				51FF00BB2351102200AEC536 /* Main.storyboard in Resources */,
 				51BE6F5D25E9808F00FB15C8 /* FloatingSwitchSegment.xib in Resources */,
 			);
@@ -173,7 +173,7 @@
 				51FF00B82351102200AEC536 /* SampleViewController.swift in Sources */,
 				51BE6F5E25E9808F00FB15C8 /* FloatingSwitchSegment.swift in Sources */,
 				511FB24725E97E70004F2260 /* String.swift in Sources */,
-				51BE6F5F25E9808F00FB15C8 /* FloatingSwitch.swift in Sources */,
+				51BE6F5F25E9808F00FB15C8 /* FloatingSwitchView.swift in Sources */,
 				51FF00B42351102200AEC536 /* AppDelegate.swift in Sources */,
 				51FF00B62351102200AEC536 /* SceneDelegate.swift in Sources */,
 			);

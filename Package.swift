@@ -21,5 +21,6 @@ let package = Package(
         .target(
             name: "FloatingSwitch",
 			path: "Sources"),
-    ]
+    ],
+	swiftLanguageVersions: [SwiftVersion.v5]
 )

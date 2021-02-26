@@ -1,5 +1,5 @@
 //
-//  FloatingSwitch.swift
+//  FloatingSwitchView.swift
 //  FloatingSwitch
 //
 //  Created by usagimaru on 2019/10/12.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FloatingSwitch: UIView {
+class FloatingSwitchView: UIView {
 
 	@IBOutlet private weak var stackView: UIStackView!
 	@IBOutlet private weak var backgroundView: UIVisualEffectView!
@@ -189,7 +189,7 @@ class FloatingSwitch: UIView {
 		titles.forEach {
 			let segment = FloatingSwitchSegment()
 			self.stackView.addArrangedSubview(segment)
-			segment.floatingSwitch = self
+			segment.floatingSwitchView = self
 			segment.title = $0
 		}
 		
