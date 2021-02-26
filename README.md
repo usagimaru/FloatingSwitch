@@ -4,7 +4,7 @@ A replication of a segmented control in the iOS 13 Photos.app.
 
 <img src="./demo-light.jpg" alt="Demo Image: Light Mode" width=300> <img src="./demo-dark.jpg" alt="Demo Image: Dark Mode" width=300>
 
-<video controls muted loop autoplay width=375 src="https://user-images.githubusercontent.com/1835776/109355311-60ec0080-78c2-11eb-8782-b09147ff4473.mp4" alt="Demo play"></video>
+[Video](https://user-images.githubusercontent.com/1835776/109355888-46665700-78c3-11eb-9abd-ee6d0a5f4837.mp4)
 
 # Core Classes
 
