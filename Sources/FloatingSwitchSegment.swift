@@ -67,7 +67,12 @@ class FloatingSwitchSegment: UIView {
 			return
 		}
 		
+		#if SWIFT_PACKAGE && swift(>=5.3)
+		let bundle = Bundle.module
+		#else
 		let bundle = Bundle(for: type(of: self))
+		#endif
+		
 		let nib = UINib(nibName: "\(Self.self)", bundle: bundle)
 		let objs = nib.instantiate(withOwner: self, options: nil)
 		
