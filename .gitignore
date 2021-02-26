@@ -24,6 +24,7 @@ xcuserdata
 *.xcscmblueprint
 project.xcworkspace
 .DS_Store
+.swiftpm
 
 ## Obj-C/Swift specific
 *.hmap
