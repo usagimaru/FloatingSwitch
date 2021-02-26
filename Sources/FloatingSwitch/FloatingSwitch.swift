@@ -67,7 +67,8 @@ class FloatingSwitch: UIView {
 			return
 		}
 		
-		let nib = UINib(nibName: "\(Self.self)", bundle: nil)
+		let bundle = Bundle(for: type(of: self))
+		let nib = UINib(nibName: "\(Self.self)", bundle: bundle)
 		let objs = nib.instantiate(withOwner: self, options: nil)
 		
 		guard let contentView = objs.first as? UIView else {
